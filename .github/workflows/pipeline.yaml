@@ -1,15 +1,15 @@
-name: "Implementation"
+name: "Implantação"
 
 on:
   workflow_dispatch:
 
 jobs:
-  implantacao:
+  impantacao:
     runs-on: self-hosted
     name: "Implantação"
     steps:
       - uses: actions/checkout@v2
-      - name: "Deploy to kubernetes"
+      - name: "Deploy no Kubernetes"
         run: kubectl apply -f deployment.yaml
       - name: "Listando pods"
         run: kubectl get pods
